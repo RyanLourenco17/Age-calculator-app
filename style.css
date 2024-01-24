@@ -11,25 +11,27 @@
 
 body{
     background-color: rgb(240, 240, 240);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card{
+    background-color: rgb(255, 255, 255);
+    border-radius: 1rem 1rem 10rem 1rem;
+    width: 600px;
+}
+.container{
+    padding: 2rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    margin: 8% 3%;
-    overflow: hidden;
 }
 
-.center{
-    background-color: rgb(255, 255, 255);
-    padding: 3%;
-    border-radius: 1rem 1rem 9rem 1rem;
-    width: 40%;
-}
-
-.center form{
+.card form{
     display: flex;
-    border-bottom: 2px solid rgb(219, 219, 219);
     gap: 2rem;
-    width: 80%;
+    /* width: 80%; */
 }
 
 form .customInput{
@@ -60,7 +62,7 @@ form .customInput input{
     font-size: 22px;
     font-weight: 700;
     outline: none;
-    width: 100%;
+    width: 100px;
 }
 
 form .customInput input:focus{
@@ -83,29 +85,35 @@ form .customInput input.error{
 
 
 /* BUTTON */
-.center .btnCalculate{
+.card .btnContainer{
+    display: flex;
+    align-items: center;
+}
+
+.btnContainer hr{
+    border: 1px solid rgb(219, 219, 219);
+    width: 100%;
+}
+.card .btnCalculate{
     background-color: rgb(133, 77, 255);
-    float: right;
     border-radius: 2rem;
     padding: .6rem;
-    position: relative;
-    bottom: 2rem;
     cursor: pointer;
     height: 4rem;
     transition: .5s ease-in-out;
 }
 
-.center .btnCalculate:hover{
+.card .btnCalculate:hover{
     background-color: rgb(84, 84, 84);
 }
 
-.center .btnCalculate svg{
+.card .btnCalculate svg{
     padding: .3rem;
 }
 
 
 /* OUTPUT */
-.center .output{
+.card .output{
     margin-top: 2rem;
     font-size: 62px;
     font-weight: 800;
@@ -126,25 +134,30 @@ form .customInput input.error{
 }
 
 /* Responsivo */
-@media only screen and (min-width: 320px) and (max-width: 890px) { 
-    .center{
-        padding: 10% 5%;
-        width: 100%;
+@media only screen and (min-width: 320px) and (max-width: 600px){
+    .card{
+        width: 360px;
     }
 
-    .center form{
-        width: 100%;
+    .container{
+        padding: 1rem;
     }
-
+    
     form .customInput{
-        padding: 0  0 4rem 0;
+        padding-bottom: 3rem;
     }
 
-    .center .btnCalculate{
-        right: 42%;
+    form .customInput input{
+        width: 88px;
     }
 
-    .center .output{
+    .card .btnCalculate{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .card .output{
         margin-top: 3rem;
         font-size: 49px;
     }
