@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./assets/images/favicon-32x32.png" type="image/x-icon">
+    <title>Age Calculator App</title>
+</head>
+<body>
+    <main class="center">
+        <form>
+            <div class="customInput">
+                <label for="day">Day</label>
+                <input type="number" name="day" id="day" placeholder="DD">
+                <p class="msgError">This field is required</p>
+                <p class="invalidErrorMSG">must be a valid day</p>
+            </div>
+            <div class="customInput">
+                <label for="month">Month</label>
+                <input type="number" name="month" id="month" placeholder="MM">
+                <p class="msgError">This field is required</p>
+                <p class="invalidErrorMSG">must be a valid month</p>
+            </div>
+            <div class="customInput">
+                <label for="day">Year</label>
+                <input type="number" name="year" id="year" placeholder="YYYY">
+                <p class="msgError">This field is required</p>
+                <p class="invalidErrorMSG">must be in the pas</p>
+            </div>
+        </form>
+        <button class="btnCalculate">
+            <svg xmlns="http://www.w3.org/2000/svg" width="46" height="44" viewBox="0 0 46 44"><g fill="none" stroke="#FFF" stroke-width="2"><path d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 22.019C37.667 21.686 23 25.616 23 44"/></g></svg>
+        </button>
+        <div class="output">
+            <div class="age">
+                <span class="number">--</span>
+                <p>years</p>
+            </div>
+            <div class="age">
+                <span class="number">--</span>
+                <p>months</p>
+            </div>
+            <div class="age">
+                <span class="number">--</span>
+                <p>days</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="#">Ryan Lourenço</a>.
+    </div> -->
+    <script src="./script.js"></script>
+</body>
+</html>

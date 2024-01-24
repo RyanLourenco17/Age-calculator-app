@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,700;0,800;1,400;1,800&display=swap');
+
+*{
+    margin: 0;
+    border: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+body{
+    background-color: rgb(240, 240, 240);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 8% 3%;
+    overflow: hidden;
+}
+
+.center{
+    background-color: rgb(255, 255, 255);
+    padding: 3%;
+    border-radius: 1rem 1rem 9rem 1rem;
+    width: 40%;
+}
+
+.center form{
+    display: flex;
+    border-bottom: 2px solid rgb(219, 219, 219);
+    gap: 2rem;
+    width: 80%;
+}
+
+form .customInput{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    color: rgb(113, 111, 111);
+    text-transform: uppercase;
+    gap: .3rem;
+    padding: 0  0 2rem 0;
+}
+
+form .customInput label.error{
+    color: rgb(255, 87, 87);
+}
+
+form .customInput label{
+    font-size: 10px;
+    font-weight: 700;
+    color: rgb(84, 84, 84);
+    letter-spacing: 0.2rem;
+}
+
+form .customInput input{
+    border: 2px solid rgb(219, 219, 219);
+    padding: .5rem .7rem;
+    border-radius: .3rem;
+    font-size: 22px;
+    font-weight: 700;
+    outline: none;
+    width: 100%;
+}
+
+form .customInput input:focus{
+    border: 1px solid rgb(84, 84, 84);
+}
+
+form .customInput input.error{
+    border: 1px solid rgb(255, 87, 87);
+}
+
+.msgError, .invalidErrorMSG{
+    display: none;
+    color: rgb(255, 87, 87);
+    text-transform: none;
+}
+
+.customInput input::-webkit-outer-spin-button, .customInput input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+
+/* BUTTON */
+.center .btnCalculate{
+    background-color: rgb(133, 77, 255);
+    float: right;
+    border-radius: 2rem;
+    padding: .6rem;
+    position: relative;
+    bottom: 2rem;
+    cursor: pointer;
+    height: 4rem;
+    transition: .5s ease-in-out;
+}
+
+.center .btnCalculate:hover{
+    background-color: rgb(84, 84, 84);
+}
+
+.center .btnCalculate svg{
+    padding: .3rem;
+}
+
+
+/* OUTPUT */
+.center .output{
+    margin-top: 2rem;
+    font-size: 62px;
+    font-weight: 800;
+    font-style: italic;
+}
+
+.output .age{
+    display: flex;
+    justify-content: start;
+}
+
+.output .age:nth-child(1), .age:nth-child(2){
+    margin-bottom: -20px;
+}
+
+.output .age span{
+    color: rgb(133, 77, 255);
+}
+
+/* Responsivo */
+@media only screen and (min-width: 320px) and (max-width: 890px) { 
+    .center{
+        padding: 10% 5%;
+        width: 100%;
+    }
+
+    .center form{
+        width: 100%;
+    }
+
+    form .customInput{
+        padding: 0  0 4rem 0;
+    }
+
+    .center .btnCalculate{
+        right: 42%;
+    }
+
+    .center .output{
+        margin-top: 3rem;
+        font-size: 49px;
+    }
+}
